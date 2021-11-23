@@ -1,12 +1,12 @@
 const axios = require('axios');
-function getTickets() {
+function getTickets(qParams) {
 var configuration = {
 	auth: {
 		username: process.env.USERNAME,
 		password: process.env.PASSWORD
 	}
 };
-return axios.get('https://'+process.env.SUBDOMAIN+'.zendesk.com/api/v2/tickets.json?page=1'+'&per_page=25', configuration)
+return axios.get(getURL(qParams), configuration)
 .then(function (res) {
   return res;
 })
@@ -17,4 +17,16 @@ return axios.get('https://'+process.env.SUBDOMAIN+'.zendesk.com/api/v2/tickets.j
 	throw error;
 }); 
 }
+
+function getURL(qParams) {
+	var apiUrl = 'https://'+process.env.SUBDOMAIN+'.zendesk.com/api/v2/tickets.json?page[size]=25';
+	if (qParams.nextpage) {
+		apiUrl += '&page[after]=' + qParams.nextpage;
+	}
+	else if (qParams.previouspage) {
+		apiUrl += '&page[before]=' + qParams.previouspage;
+	}
+	return apiUrl;
+}
+
 exports.getTickets = getTickets;

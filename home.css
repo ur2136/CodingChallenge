@@ -1,0 +1,12 @@
+.row{
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%
+	flex: 1;
+	color: yellow;
+}

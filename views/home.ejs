@@ -3,9 +3,48 @@
  <head>
  	<meta charset="UTF-8" />
  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 	<title>Tickets</title>
+ 	<link type="text/css" rel="stylesheet" href="/assets/home.css">
  </head>
  <body>
- 	<h1>Tickets</h1>
+ 	<div class='wrapper'>
+ 	<div class='row'>
+ 	<div class='column'>
+ 	<% if (tickets.length > 0) { %>
+ 	<table>
+ 		<thead>
+ 			<tr>
+ 				<th>Ticket Id</th>
+ 				<th>Ticket Status</th>
+ 			</tr>
+ 		</thead>
+ 		<tbody>
+ 			<% tickets.forEach(function(ticket) { %>
+ 	    		<tr>
+ 	  				<td><%=ticket.id%></td>
+ 	  				<td><%=ticket.status%></td>
+ 	  			</tr>
+ 	  		<% }); %>
+ 	  	</tbody>
+ 	</table>
+    <% } else { %>
+ 	  <p>No tickets.</p>
+ 	<% } %>
+<div>
+ <form method="get" action="/">
+ 	<input type="hidden" name="previouspage" value="<%= meta.before_cursor %>" />
+ 	<button>Previous</button>
+ </form>
+ <form method="get" action="/">
+ 	<input type="hidden" name="nextpage" value="<%= meta.after_cursor %>" />
+ 	<button>Next</button>
+ </form>
+ </div>
+ </div>
+ <div class='column'>
+ 	YES
+ </div>
+</div>
+</div>
  </body>
+ 
 </html>

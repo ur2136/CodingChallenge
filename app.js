@@ -10,7 +10,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //public assets
-app.use(express.static('./public'));
+app.use(express.static(__dirname+'/public'));
 
 //routes
 var tickets = require('./routes/tickets');
