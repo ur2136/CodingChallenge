@@ -23,17 +23,26 @@ The project involved building a ticket viewer that will connect to the Zendesk A
 
 ## Installation
 Download or Clone the GIT repo. Checkout to main branch using the command :
+
 `git checkout main`
+
 Now navigate to the project folder using :
+
 `cd CodingChallenge`
+
 Now install node modules required for the project using :
+
 `npm install`
+
 Now to run the app, use the command :
+
 `node app`
 
 ## Tests
 Unit tests are written using SuperTest framework. Tests can be run by using the command:
+
 `npm test` 
+
 This command has to be run while the app is running (node app).
 
 Scenarios tested using unit tests:
