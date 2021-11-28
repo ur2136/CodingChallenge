@@ -73,7 +73,7 @@ describe('when user hits an incorrect URL', function() {
 		.expect('Content-Type', /html/)
 		.expect(404)
 		.end(function(err, res){
-			(res.text.includes('Cannot GET')).should.be.equal(true);
+			(res.text.includes('Oops! The page you are looking for does not exist.')).should.be.equal(true);
 			done();
 		});
 	});
@@ -87,7 +87,7 @@ describe('when user accesses an invalid url', function() {
 		.expect('Content-Type', /html/)
 		.expect(200)
 		.end(function(err, res){
-			(res.text.includes('API URL is invalid or unavailable. Try again later!')).should.be.equal(true);
+			(res.text.includes('API Not Available/Invalid')).should.be.equal(true);
 			done();
 		});
 	});
