@@ -1,9 +1,11 @@
 const axios = require('axios');
+const clientConfig = require('../config.js');
+
 function getTickets(qParams) {
 var configuration = {
-	auth: {
-		username: process.env.USERNAME,
-		password: process.env.PASSWORD
+	headers: {
+		"Content-Type": "application/json",
+		"Authorization": clientConfig.getAuthHeader()
 	}
 };
 return axios.get(getURL(qParams), configuration)
