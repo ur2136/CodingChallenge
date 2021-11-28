@@ -57,7 +57,6 @@ describe('when user clicks on previous button from first page', function() {
 		.expect('Content-Type', /html/)
 		.expect(200)
 		.end(function(err, res){
-			console.log(res);
 			(res.text.includes('No tickets')).should.be.equal(true);
 			(res.text.includes('nextButton')).should.be.equal(true);
 			(res.text.includes('prevButton')).should.be.equal(true);
@@ -75,6 +74,20 @@ describe('when user hits an incorrect URL', function() {
 		.expect(404)
 		.end(function(err, res){
 			(res.text.includes('Cannot GET')).should.be.equal(true);
+			done();
+		});
+	});
+});
+
+describe('when user accesses an invalid url', function() {
+	const apiUrl = '/?previouspage=eyJvIjoibmljZV9pZCIsInYiOiJh'
+	it('should render page with error message', function(done) {
+		app
+		.get(apiUrl)
+		.expect('Content-Type', /html/)
+		.expect(200)
+		.end(function(err, res){
+			(res.text.includes('API URL is invalid or unavailable. Try again later!')).should.be.equal(true);
 			done();
 		});
 	});

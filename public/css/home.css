@@ -37,3 +37,8 @@
 form {
 	display: inline-block;
 }
+
+#errorMessage {
+	max-width: max-content;
+	margin: auto;
+}
