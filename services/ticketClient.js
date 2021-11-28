@@ -13,7 +13,6 @@ return axios.get(getURL(qParams), configuration)
   return res;
 })
 .catch(function (err) {
-	console.log(err);
 	var error = new Error(res.statusText);
 	error.response = res;
 	throw error;

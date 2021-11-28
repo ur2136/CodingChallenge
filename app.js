@@ -14,7 +14,10 @@ app.use(express.static(__dirname+'/public'));
 
 //routes
 var tickets = require('./routes/tickets');
+var error = require('./routes/error');
+
 app.use("/", tickets);
 app.use("/tickets", tickets);
+app.use("*", error);
 
 app.listen(port, () => console.log(`App started on ${port}`));
