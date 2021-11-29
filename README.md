@@ -25,13 +25,13 @@ Also EJS allows to use Javascript code directly inside the template which means 
 * I used Axios for making HTTP requests from NodeJs as Axios performs automatic transformations of JSON Data, is more secure, has better error handling and is supported by more browsers as compared to node-fetch which is also quite popular.
 
 ## Installation
-Download or Clone the GIT repo. Checkout to main branch using the command :
-
-`git checkout main`
-
-Now navigate to the project folder using :
+Download or Clone the GIT repo. Now navigate to the project folder using :
 
 `cd CodingChallenge`
+
+Checkout to main branch using the command :
+
+`git checkout main`
 
 Now install node modules required for the project using :
 
