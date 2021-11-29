@@ -52,7 +52,7 @@ Create a file called `.env` inside the root directory with contents:
 `TOKEN=<oauth-authorization-access-token>`
 
  
-where <name-of-zendesk-subdomain> is the name of the zendesk subdomain and <oauth-authorization-access-token> is the oauth authorization access token for the user.
+where `<name-of-zendesk-subdomain>` is the name of the zendesk subdomain and `<oauth-authorization-access-token>` is the oauth authorization access token for the user.
 
 Now install node modules required for the project using :
 
