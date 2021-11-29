@@ -48,7 +48,8 @@ Unit tests have been written for API endpoints which involves checking both the 
 
 `npm test` 
 
-This command has to be run while the app is running (node app).
+This command has to be run while the app is running (node app) because the API tests require a running server to execute the test scenarios. Individual unit test cases in unit-tests.js file don't require a server to be run to run them, and in order to avoid 'address in use' error, these unit tests are being run on port 3002.
+Running the aforementioned command runs all the 9 unit tests (API endpoint tests + unit tests).
 
 Scenarios tested using unit tests:
 1. The tickets are being rendered along with the previous and next buttons when user loads the home page.
