@@ -21,8 +21,17 @@ The project involved building a ticket viewer that will connect to the Zendesk A
 
 ## Design Considerations
 * I used EJS in place of the other templating frameworks like Pug because having known HTML and CSS from before, it was much simpler for me to pick up EJS syntax. 
-Also EJS allows to use Javascript code directly inside the template which means loops, if conditions etc can be used inside a template. Other templates use their own syntax and do not directly write Javascript.
+Also EJS allows to use Javascript code directly inside the template which means loops, if conditions etc can be used inside a template. Other templates use their own syntax and do not directly write Javascript. I had never used a templating framework before and I definitely need to read more about EJS and its usage.
 * I used Axios for making HTTP requests from NodeJs as Axios performs automatic transformations of JSON Data, is more secure, has better error handling and is supported by more browsers as compared to node-fetch which is also quite popular.
+* I have kept the frontend simple and lightweight by using basic HTML, CSS, Bootstrap and EJS.
+* Node and Express have been used for backend development, and the backend is kept as simple as possible.
+
+## Future Scope
+* In order to build a full stack application that could support many different components and functionalities, a framework like AngularJS or React can be used.
+* The website can be styled better and made more responsive with the help of Bootstrap templates and components.
+* In terms of test coverage, we can add automation test scenarios and cucumber user stories to perform end-to-end testing of the application flows. Currently API endpoints and functions used to call these endpoints are being tested.
+* The pagination can be made better by exactly determining how many pages of data is available and allowing user to navigate between any of these pages rather than having only 2 possible options : Previous and Next.
+* A landing page (home page) can be added rather than directly rendering all the tickets when the application is first opened on the browser.
 
 ## Installation
 Download or Clone the GIT repo. Now navigate to the project folder using :
@@ -32,6 +41,8 @@ Download or Clone the GIT repo. Now navigate to the project folder using :
 Checkout to main branch using the command :
 
 `git checkout main`
+
+NOTE : Credentials are stored in .env file under the titles SUBDOMAIN and TOKEN. .env files should not be checked in on GIT to prevent them from being compromised however the file has been added here for review (with removed credentials). In order to run the app locally, the user will have to provide values for SUBDOMAIN and TOKEN fields where SUBDOMAIN is the Zendesk Subdomain Name and TOKEN is the OAuth Authorization Token for a user.
 
 Now install node modules required for the project using :
 
@@ -43,7 +54,6 @@ Now to run the app, use the command :
 
 Opening http://localhost:3000/ on the browser will now open Zendesk Ticket Viewer.
 
-Credentials are stored in .env file under the titles SUBDOMAIN and TOKEN. .env files should not be checked in on GIT to prevent them from being compromised however the file has been added here for review (with removed credentials). In order to run the app locally, the user will have to provide values for SUBDOMAIN and TOKEN fields where SUBDOMAIN is the Zendesk Subdomain Name and TOKEN is the OAuth Authorization Token for a user.
 
 ## Tests
 Unit tests have been written for API endpoints which involves checking both the network response as well as the data received. Unit tests are written using SuperTest and Mocha framework. SuperTest is a library used to assert network requests through another library superagent. Tests can be run by using the command:
