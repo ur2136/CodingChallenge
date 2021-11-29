@@ -54,11 +54,11 @@ Create a file called `.env` inside the root directory with contents:
  
 where `<name-of-zendesk-subdomain>` is the name of the zendesk subdomain and `<oauth-authorization-access-token>` is the oauth authorization access token for the user.
 
-Now install node modules required for the project using :
+Now install node modules required for the project (in the root directory) using :
 
 `npm install`
 
-Now to run the app, use the command :
+Now to run the app, use the command (in the root directory) :
 
 `node app`
 
