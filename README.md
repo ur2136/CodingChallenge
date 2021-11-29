@@ -41,7 +41,7 @@ Now to run the app, use the command :
 
 `node app`
 
-Credentials are stored in .env file under the titles SUBDOMAIN and TOKEN. .env files should not be checked in on GIT to prevent them from being compromised however the file has been added here for review (with removed credentials).
+Credentials are stored in .env file under the titles SUBDOMAIN and TOKEN. .env files should not be checked in on GIT to prevent them from being compromised however the file has been added here for review (with removed credentials). In order to run the app locally, the user will have to provide values for SUBDOMAIN and TOKEN fields where SUBDOMAIN is the Zendesk Subdomain Name and TOKEN is the OAuth Authorization Token for a user.
 
 ## Tests
 Unit tests have been written for API endpoints which involves checking both the network response as well as the data received. Unit tests are written using SuperTest and Mocha framework. SuperTest is a library used to assert network requests through another library superagent. Tests can be run by using the command:
