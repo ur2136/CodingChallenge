@@ -46,8 +46,11 @@ NOTE : Credentials are stored in .env file under the titles SUBDOMAIN and TOKEN.
 
 Create a file called .env file inside the root directory with contents:
 `SUBDOMAIN=<name-of-zendesk-subdomain>
+
  TOKEN=<oauth-authorization-access-token>
  `
+ 
+where <name-of-zendesk-subdomain> is the name of the zendesk subdomain and <oauth-authorization-access-token> is the oauth authorization access token for the user.
 
 Now install node modules required for the project using :
 
