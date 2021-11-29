@@ -6,7 +6,7 @@ The project involved building a ticket viewer that will connect to the Zendesk A
 ## Features Implemented
 1. The user interface displays 25 tickets at a time, with their IDs and statuses displayed in a table. The user can click on Previous or Next Buttons to navigate between pages and view more tickets. If tickets are exhausted (no remaining tickets for the account), 'No tickets' message is displayed. I have also handled the API URL being invalid or unavailable with the help of error route with a custom message saying 'API Not Available/Invalid' and the reason for failure is printed as well.
 2. When the user clicks on 'More Details' button corresponding to a particular ticket, a modal opens up that displays the Subject, Description and Created At fields for a ticket. This proved to be really challenging for me because initially my ejs page was behaving incorrectly and the modals were showing the wrong text (i.e. same values for all tickets). After debugging the code, I realised that the id attributes inside the HTML elements need to have unique values and hence data-target attribute and id attribute both have to be appended with the ticket id which will be unique for each ticket.
-3. The application connects to the API using OAuth Client Token Authentication.
+3. The application connects to the API using OAuth Client Token Authentication (Token value stored under TOKEN heading inside .env file).
 4. Cursor based pagination is implemented.
 
 ## Technology Stack
