@@ -20,4 +20,11 @@ app.use("/", tickets);
 app.use("/tickets", tickets);
 app.use("*", error);
 
-app.listen(port, () => console.log(`App started on ${port}`));
+if(process.env.NODE_ENV === 'test') {
+	app.set('port', 3002);
+}
+else {
+    app.listen(port, () => console.log(`App started on ${port}`));
+}
+
+module.exports = app;

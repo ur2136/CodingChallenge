@@ -1,6 +1,7 @@
 const request = require('supertest');
 const app = request.agent("http://localhost:3000");
 const should = require('should');
+const tickets = require('../services/ticketClient');
 
 describe('when user loads home page', function() {
 	it('should render first page of tickets with previous and next buttons and list of tickets', function(done) {
@@ -92,6 +93,10 @@ describe('when user accesses an invalid url', function() {
 		});
 	});
 });
+
+
+
+
 
 
 
