@@ -42,7 +42,7 @@ Checkout to main branch using the command :
 
 `git checkout main`
 
-NOTE : Credentials are stored in .env file under the titles SUBDOMAIN and TOKEN. .env files should not be checked in on GIT to prevent them from being compromised however the file has been added here for review (with removed credentials). In order to run the app locally, the user will have to provide values for SUBDOMAIN and TOKEN fields where SUBDOMAIN is the Zendesk Subdomain Name and TOKEN is the OAuth Authorization Token for a user.
+NOTE : Credentials are stored in .env file under the titles SUBDOMAIN and TOKEN. .env files should not be checked in on GIT to prevent them from being compromised so the file will have to be created locally by the user who runs the app (instructions below). In order to run the app locally, the user will have to provide values for SUBDOMAIN and TOKEN fields where SUBDOMAIN is the Zendesk Subdomain Name and TOKEN is the OAuth Authorization Token for a user.
 
 Create a file called `.env` inside the root directory with contents:
 
